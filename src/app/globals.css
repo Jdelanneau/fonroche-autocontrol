@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background: #14181c;
+  color: #f4f6f7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+::selection {
+  background: #ff7a3d;
+  color: #1a1207;
+}
+
+/* Accordion body: animated max-height, driven by the `data-open` attribute
+   set on the parent (see ChecklistSection.tsx) */
+.group-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.22s ease;
+}
+[data-open="true"] > .group-body {
+  max-height: 2400px;
+}
+
+.chevron-icon {
+  transition: transform 0.18s ease;
+}
+[data-open="true"] .chevron-icon {
+  transform: rotate(180deg);
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 6px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+.toast-anim {
+  animation: toast-in 0.18s ease;
+}
