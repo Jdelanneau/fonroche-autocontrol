@@ -80,7 +80,7 @@ export const NOWATT_GROUP: ChecklistGroupDef = {
     { id: "nowatt_collage_pv", label: "Collage PV" },
     { id: "nowatt_cycle_test", label: "Cycle « test » effectué" },
     { id: "nowatt_etat_charge", label: "État de charge", hasTime: true },
-    { id: "nowatt_logiciel", label: "Logiciel à jour (v2.1.0 — code 46516 bornes / 2790 plots)" },
+    { id: "nowatt_logiciel", label: "Logiciel à jour" },
     { id: "nowatt_on", label: "En « ON »" }
   ]
 };
